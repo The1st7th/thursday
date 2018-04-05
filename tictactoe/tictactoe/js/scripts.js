@@ -3,17 +3,17 @@ var player = "X";
 var playerX=[];
 var playerO=[];
 var check;
-var results=[[1,2,3],[4,5,6],[7,8,9],[2,4,8],[1,4,7],[7,5,3],[1,5,9]];
+var results=[[1,2,3],[4,5,6],[7,8,9],[2,5,8],[1,4,7],[3,5,7],[1,5,9],[3,6,9]];
 
 function winner(playerW){
 for (var i = 0; i < results.length; i++){
   if(playerW[0] == results[i][0]){
 
-    for (var j = 1; j < playerW.length;j++){
+    for (var j = 0; j < playerW.length;j++){
       if ( playerW[j]== results[i][1]){
 
 
-        for (var j = 1; j < playerW.length;j++){
+        for (var j = 0; j < playerW.length;j++){
           if ( playerW[j] == results[i][2] ){
             $(".playerTurn").text("it is the player "+ player +" won");
             check = true;
